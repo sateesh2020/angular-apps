@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-8">
+    <div id="form-container">
+      <div class="page-header text-center">
+        <h2>Let's try some thing new</h2>
+        <!-- the links to our nested states using relative paths -->
+        <!-- add the active class if the state matches our ui-sref -->
+        <div class="text-center" id="status-buttons">
+          <a ui-sref-active="active" ui-sref=".first" class="no-events">
+            <span>1</span>
+            First</a>
+          <a ui-sref-active="active" ui-sref=".second" class="no-events">
+            <span>2</span>
+            Second</a>
+          <a ui-sref-active="active" ui-sref=".third" class="no-events">
+            <span>3</span>
+            Third</a>
+        </div>
+      </div>
+
+      <!-- use ng-submit to catch the form submission and use our Angular function -->
+      <form id="signup-form" ng-submit="vm.processForm(vm.formData)" name="vm.dataForm">
+        <!-- our nested state views will be injected here -->
+        <div id="form-views" ui-view></div>
+      </form>
+
+    </div>
+  </div>
+  <div class="col-md-4">
+
+        <!-- show our formData as it is being typed -->
+        <pre>
+        <h3>Model</h3>
+        {{ vm.formData | json }}
+        <h3>Form</h3>
+        {{ vm.dataForm | json }}
+        </pre>
+  </div>
+</div>

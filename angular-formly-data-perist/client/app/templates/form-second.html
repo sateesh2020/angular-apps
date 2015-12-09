@@ -1,0 +1,17 @@
+<formly-form model="vm.formData" fields="vm.formFields.secondForm" form="vm.dataForm.secondForm">
+</formly-form>
+
+<div class="form-group row">
+  <div class="col-xs-3">
+    <a class="btn btn-block btn-info" ui-sref="form.first">
+      <span class="glyphicon glyphicon-circle-arrow-left"></span>
+      Previous Section
+    </a>
+  </div>
+  <div class="col-xs-3 col-xs-offset-6">
+    <a class="btn btn-block btn-info" ui-sref="form.third" data-ng-disabled="vm.dataForm.secondForm.$invalid">
+      Next Section
+      <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "angular_formly_data_persist",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "postinstall":"bower install"
+  },
+  "author": "",
+  "license": "Cisco",
+  "dependencies": {
+    "body-parser": "1.14.1",
+    "express": "4.13.3",
+    "mongoose": "4.2.10",
+    "morgan": "1.6.1",
+    "winston": "2.1.1"
+  },
+  "devDependencies":{
+    "bower":"1.6.9"
+  }
+}
