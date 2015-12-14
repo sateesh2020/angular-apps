@@ -1,0 +1,26 @@
+<section class="hero">
+  <h2>
+    Welcome to Canvas World !!
+    <span class="glyphicon glyphicon-heart text-blue"></span>
+    <span class="glyphicon glyphicon-heart text-green"></span>
+    <span class="glyphicon glyphicon-heart text-yellow"></span>
+  </h2>
+  <div class="col-md-8">
+    <div class="canvas">
+      <network-canvas data-centers="vm.dataCenters">
+
+      </network-canvas>
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="data">
+        <pre>
+          <h3>Form Data</h3>
+            {{vm.formData | json}}
+          <h3>Scope</h3>
+            {{vm | json}}
+        </pre>
+    </div>
+  </div>
+</section>

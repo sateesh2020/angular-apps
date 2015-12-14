@@ -1,0 +1,17 @@
+{
+  "name": "angular_d3_forms",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "1.4.8",
+    "jquery": "2.1.4",
+    "angular-formly": "7.3.7",
+    "angular-formly-templates-bootstrap": "6.1.7",
+    "bootstrap": "3.3.6",
+    "api-check": "7.5.5",
+    "angular-animate": "1.4.8",
+    "angular-ui-router": "0.2.15",
+    "d3": "3.5.10",
+    "angular-bootstrap": "0.14.3",
+    "angular-sanitize": "~1.4.8"
+  }
+}
