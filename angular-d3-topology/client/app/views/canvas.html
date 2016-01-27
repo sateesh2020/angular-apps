@@ -1,0 +1,42 @@
+<section class="hero">
+  <h2>
+    Welcome to Canvas World !!
+    <span class="glyphicon glyphicon-heart text-blue"></span>
+    <span class="glyphicon glyphicon-heart text-green"></span>
+    <span class="glyphicon glyphicon-heart text-yellow"></span>
+  </h2>
+  <div class="row">
+    <div class="col-md-3">
+        <div class="list-group datacenters-list">
+            <div class="list-group-item col-md-12 datacenter" data-ng-repeat="datacenter in vm.dataCenters"
+            ng-drag="true" data-allow-transform="true" ng-drag-data="datacenter">
+                <div class="col-md-8">
+                    {{datacenter.name}}
+                </div>
+                <div class="col-md-4">
+                    <img ng-show="datacenter.type == 'Mac'" src="/assests/img/mac-logo.png" class="img-responsive" style="width:50px" alt="" />
+                    <img ng-show="datacenter.type == 'Linux'" src="/assests/img/ubuntu-logo.png" class="img-responsive" style="width:50px" alt="" />
+                    <img ng-show="datacenter.type == 'Windows'" src="/assests/img/windows-logo.png" class="img-responsive" style="width:50px" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+      <div class="canvas" ng-drop="true" ng-drop-success="vm.onDropComplete($data,$event)">
+        <draw-topology datacenters="vm.droppedDatacenters">
+        </draw-topology>
+      </div>
+    </div>
+
+  </div>
+  <div class="row" >
+    <div class="col-md-8 col-md-offset-2 data">
+        <pre>
+          <h3>Form Data</h3>
+            {{vm.formData | json}}
+          <h3>Scope</h3>
+            {{vm | json}}
+        </pre>
+    </div>
+  </div>
+</section>
